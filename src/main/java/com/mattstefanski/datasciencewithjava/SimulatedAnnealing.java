@@ -29,7 +29,7 @@ class SimulatedAnnealingt{
             random_cs_seed = new Random().nextDouble();
             double x_c = x_s + (-delta + 2 * delta * random_cs_seed);
             double f_s = function.process(x_s);
-            double f_c = functiongiy.process(x_c);
+            double f_c = function.process(x_c);
             double A = Math.min(1, Math.exp(-(f_c - f_s)/ temperature));
             random_activ_prob=new Random().nextDouble();
             if (random_activ_prob<A){
@@ -52,5 +52,9 @@ class SimulatedAnnealingt{
 
         }
         return(x_opt);
+    }
+
+    public static void main(String[] args) {
+       new SimulatedAnnealingt().optimize(new SampleFunction(),3,0.34,94,0.03,10);
     }
 }
