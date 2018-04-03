@@ -16,6 +16,10 @@
 *.iws
 *.iml
 *.ipr
+.grandle
+grandlew
+grandlew.bat
+build.grandle
 
 ### NetBeans ###
 nbproject/private/
